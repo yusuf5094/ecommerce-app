@@ -1,0 +1,36 @@
+<section class="login-section">
+
+    <div class="login-wrapper">
+
+        <form action="/login" method="POST">
+
+            <label for="">Email</label> </br>
+
+            <input name="email" type="email" placeholder="Email"> </br>
+
+            <label for="">Password</label> </br>
+
+            <input name="password" type="password" placeholder="Password"> </br>
+
+            <% if(messages.error){ %>
+
+                <span class="register-error"><em>* <%= messages.error %></em></span>
+    
+            <% } %>
+
+            <div class="login-btn-container">
+
+            <button type="submit">Sign In</button>
+
+            <a href="/register">Don't Have Account?</a>
+
+            </div>
+        
+
+        </form>
+
+        
+
+    </div>
+
+</section>

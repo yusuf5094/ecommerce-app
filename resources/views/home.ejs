@@ -1,1 +1,51 @@
-<h1>Hii there,this is the home page</h1>
+
+
+    <section class="hero">
+
+        <div class="section-wrapper">
+
+            <div class="section-left">
+                <p><em>Are You Hungry?</em></p>
+                <h6>Don't Wait!</h6>
+                <a href="#"><button class="order-btn">Order Now</button></a>
+            </div>
+    
+            <div class="section-right"><img src="/img/hero-pizza.png" alt=""></div>
+
+        </div>
+
+        
+
+       
+
+    </section>
+
+    <section class="menu-section">
+        
+        <div class="menu-wrapper">
+
+            <% pizzas.forEach((pizza) => { %>
+
+                <div class="item-card">
+
+                    <img src="/img/piz1.jpg" alt="">
+                    <h3> <%= pizza.name %>  </h3>
+                    <span><%= pizza.size %></span>
+                    <div class="card-price-btn">
+                        <h3>₹<%= pizza.price %></h3>
+                        <a href="#"><button data-pizza="<%= JSON.stringify(pizza) %>" class="add-to-cart">+ Add</button></a>
+                    </div>
+    
+                </div>
+
+            <% })                        %>
+            
+
+           
+
+         </div>
+
+    </section>
+
+
+    

@@ -1,0 +1,31 @@
+<section class="login-section">
+    <div class="login-wrapper">
+
+        <form action="/register" method="POST">
+
+            <label for="">Name</label> </br>
+            <input name="name" type="text" placeholder="Your Name" value="<%= messages.name %>"> </br>
+
+            <label for="">Email</label> </br>
+            <input name="email" type="email" placeholder="Email" value="<%= messages.email %>">
+           
+            <label for="">Password</label> </br>
+            <input name="password" type="password" placeholder="Password"> </br>
+
+            <% if(messages.error){ %>
+
+            <span class="register-error"><em><%= messages.error %></em></span>
+
+            <% } %>
+
+            <div class="login-btn-container">
+                <button type="submit">Sign Up</button>
+                <a href="/login">Already Have Account?</a>
+            </div>
+
+        </form>
+        
+        
+
+    </div>
+</section>
